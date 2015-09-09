@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+/*
+	Branden Hitt
+	Sept 9th, 2015
+	Purpose: To investigate variables and operators
+*/
+</script>
+</head>
+
+<body>
+<script>
+	//Declare all primitive data types
+	var ix=1;//Integer
+	var str="<p> x="+ix+"</p>";//String concatenation
+	var str1="<p> x=";//String
+	var str2="</p>";//String
+	var sx="1";//String
+	var str3=sx+ix;//String math
+	var str4=ix+parseInt(sx);//String math
+	var bx=true;//Boolean
+	var by=false;//Boolean
+	var fx=321e-1;//Float using scientific notation 32.1
+	//Output the results
+	document.write("<p> x="+ix+"</p>");
+	document.write(str);
+	document.write("<p> x=",ix,"</p>");
+	document.write(str1,ix,str2);
+	document.write("<p> x=",str3,"</p>");
+	document.write("<p> x=",str4,"</p>");
+	document.write("<p> bx=",bx," by=",by,"</p>");
+	document.write(str1,fx,str2);
+	//Future value calculation
+	var pv=100.0;//{resent value in &'s
+	var i=0.08;//Interest rate = 8%
+	var n=9;//number of compounding periods
+	var fv=pv*Math.pow((1+i),n);
+	document.write("<p> Future Value = $ "+fv.toFixed(2)+"</p>");
+	//Ternary operator
+	var hours=30;//Hours worked
+	var payRate=15;//Pay rate $'s/hour
+	var payChk=hours*payRate;
+	var dblTime=20;
+	var payChk=hours<0   ?            0:
+			hours<dblTime?hours*payRate: 
+			dblTime*payRate + 2*(hours-dblTime)*payRate;
+	document.write("<p> Future Value = $ "+payChk.toFixed(2)+"</p>");
+</script>
+</body>
+</html>
