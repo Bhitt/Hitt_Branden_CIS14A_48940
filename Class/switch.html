@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<script>/* Purpose: If else
+			Branden Hitt
+			9/14/15
+			*/
+		</script>
+		<meta charset="utf-8">
+		<title>Grading with If constructs</title>
+</head>
+
+  <body>
+	<script type="text/javascript">
+		//Input score, output grade
+		var score=prompt("What is your score?");
+		var grade;
+		if(score <   0) grade="Not a possible score";
+		if(score >=  0 && score<  60) grade="an F";
+		if(score >= 60 && score<  70) grade= "a D";
+		if(score >= 70 && score<  80) grade= "a C";
+		if(score >= 80 && score<  90) grade= "a B";
+		if(score >= 90 && score<=100) grade="an A";
+		if(score > 100) 			  grade="Not a possible score";
+		document.write("<p>Your grade is " + grade + "</p>"); 
+	</script>
+  </body>
+</html>

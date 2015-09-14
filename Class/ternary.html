@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<script>/* Purpose: Ternary Operator
+			Branden Hitt
+			9/14/15
+			*/
+		</script>
+		<meta charset="utf-8">
+		<title>Grading</title>
+</head>
+
+  <body>
+	<script type="text/javascript">
+		//Input score, output grade
+		var score=prompt("What is your score?");
+		var grade = score<0?"Not a possible score":
+		    		score<60?"an F":
+					score<70?"a D":
+					score<80?"a C":
+					score<90?"a B":
+					score<=100?"an A":
+							"Not a possible score";
+		document.write("<p>Your grade is " + grade,"</p>"); 
+	</script>
+  </body>
+</html>
