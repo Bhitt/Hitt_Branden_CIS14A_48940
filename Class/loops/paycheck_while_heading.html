@@ -39,6 +39,7 @@
 			//loop to fill the table
 			while(++hours<=nHours){
 				document.write("<tr>");
+					//first paycheck
 					if(hours<=dblTim){
 						payChk=hours*payRate;
 					}else if (hours<trpTim){
@@ -46,11 +47,7 @@
 					}else{
 						payChk=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
 					}
-					document.write("<td>"+hours+"</td>");
-					document.write("<td>$"+payChk.toFixed(2)+"</td>");
-				document.write("</tr>");
-				//second pay rate
-				document.write("<tr>");
+					//second paycheck
 					if(hours<=dblTim){
 						payChk2=hours*payRat2;
 					}else if (hours<trpTim){
@@ -59,6 +56,7 @@
 						payChk2=dblTim*payRat2+(trpTim-dblTim)*2*payRat2+(hours-trpTim)*3*payRat2;
 					}
 					document.write("<td>"+hours+"</td>");
+					document.write("<td>$"+payChk.toFixed(2)+"</td>");
 					document.write("<td>$"+payChk2.toFixed(2)+"</td>");
 				document.write("</tr>");
 			}
