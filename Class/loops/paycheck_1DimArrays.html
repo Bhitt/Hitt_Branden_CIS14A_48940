@@ -15,53 +15,38 @@
 
 	<body>
     <table width="200" border="1">
-    	<tr>
-        	<th>Hours</th>
-            <th>Pay Check</th>
+        <tr>
+          <th>Hours</th>
+          <th>Pay Check</th>
         </tr>
         <script>
-			//Declare Variables
-			var payRbeg=10;//Beginning Payrate range
-			var payRend=30;//Ending Payrate range
-			var payRinc=5;//Payrate incriment
+			//Declare variables
+			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
 			var nHours=85;//Total number of hours in table
 			var dblTim=20;//Double time starts
 			var trpTim=40;//Triple time starts
-			//declare 1-dim array
-			var payRate=[];
+			//Declare 1-Dim arrays
 			var hrsWrkd=[];
 			var payChk=[];
-			//fill the payRate array
-			for(var indx=0,rate=payRbeg;rate<=payRend;indx++,rate+=payRinc){
-				payRate[indx]=rate;
-				payChk[indx]=[];
-			}
-			
-			//fill the 2-dim parallel array with data
+			//Fill the 1-Dim parallel array with data
 			for(var hours=0;hours<=nHours;hours++){
-				hrsWrkd[hours]=hours;
-				for(var indx=0;indx<=payRate.length;indx++){
-					if(hours<=dblTim){
-						payChk[indx][hours]=hours*payRate[indx];
-					}else if (hours<trpTim){
-						payChk[indx][hours]=dblTim*payRate[indx]+(hours-dblTim	
-						       )*2*payRate[indx];
-					}else{
-						payChk[indx][hours]=dblTim*payRate[indx]+(trpTim-
-						       dblTim)*2*payRate[indx]+(hours-trpTim)*3*
-							   payRate[indx];
-					}
-				}
+			  hrsWrkd[hours]=hours;
+			  if(hours<=dblTim){
+				   payChk[hours]=hours*payRate;
+			  }else if(hours<trpTim){
+				   payChk[hours]=dblTim*payRate+(hours-dblTim)*2*payRate;
+			  }else{
+				   payChk[hours]=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
+			  }
 			}
-			//display the arrays
+			//Display the arrays
 			for(var hours=0;hours<=nHours;hours++){
 				document.write("<tr>");
-					document.write("<td>"+hoursWrkd[hours]+"</td>");
-					document.write("<td>$"+payChk[hours].toFixed(2)+"</td>");
+				  document.write("<td>"+hrsWrkd[hours]+"</td>");
+				  document.write("<td>$"+payChk[hours].toFixed(2)+"</td>");
 				document.write("</tr>");
 			}
-			
-        </script>
-        </table>
-	</body>
+		</script>
+	</table>
+    </body>
 </html>

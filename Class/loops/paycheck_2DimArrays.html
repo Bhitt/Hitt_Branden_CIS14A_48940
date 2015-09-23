@@ -39,7 +39,7 @@
 			//fill the 2-dim parallel array with data
 			for(var hours=0;hours<=nHours;hours++){
 				hrsWrkd[hours]=hours;
-				for(var indx=0;indx<=payRate.length;indx++){
+				for(var indx=0;indx<payRate.length;indx++){
 					if(hours<=dblTim){
 						payChk[indx][hours]=hours*payRate[indx];
 					}else if (hours<trpTim){
@@ -55,8 +55,8 @@
 			//display the arrays
 			for(var hours=0;hours<=nHours;hours++){
 				document.write("<tr>");
-					document.write("<td>"+hoursWrkd[hours]+"</td>");
-					for(var indx=0;indx<=payRate.length;indx++){
+					document.write("<td>"+hrsWrkd[hours]+"</td>");
+					for(var indx=0;indx<payRate.length;indx++){
 					document.write("<td>$"+payChk[indx][hours].toFixed(2)+"</td>");
 					}
 				document.write("</tr>");
