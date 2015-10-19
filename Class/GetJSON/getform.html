@@ -9,7 +9,6 @@
 <body>
 	<script type="text/javascript">
 		var url=document.location.href;
-		document.write("<p>"+url+"</p>");
 		$_GET=getForm(url);
 		for(property in $_GET){
 				document.write(property+"="+$_GET[property]+"</br>");
