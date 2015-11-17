@@ -1,0 +1,15 @@
+E-commerce site: So far I am planning my e-commerce site to have 8 total pages. The first page is the Home Page. It will contain
+a greeting as well as a hub to jump back to if needed. The home page leads to either a form to log-in or to the store listing pages.
+Inside the store listing pages will be products listed with prices. These products can be added to a shopping cart which will be accessed
+through a log-in. From there, you may go to a check-out/pricing page to see the total. Most of the site will probably end up being accessable
+from any other page to simplify the process of navigating the website. I haven't decided on a "product" just yet, however I'm more worried at this
+point with the implementation.
+
+
+
+
+Puzzle/Game site: My idea currently for my personal project is to create a point and click
+adventure game. It would take place inside a house that you (the user) have inherited from
+your late grandfather. Your goal in the website is to navigate its various rooms and discover
+your grandfather's hidden treasure room. I imagine the rooms will be displayed through seperate
+pages, and each page will have some sort of logic puzzle for the user to figure out.
