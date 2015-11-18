@@ -14,3 +14,7 @@ ul{
 .nav li{
     display:inline;    
 }
+.listings li{
+	display:inline;
+	padding: 40px 40px;	
+}
