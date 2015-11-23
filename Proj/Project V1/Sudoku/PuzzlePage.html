@@ -4,25 +4,8 @@
   	<link href="puzzlepage.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Puzzle Page</title>
-    <script>
-		function enter(){
-			var box=prompt("Input Number:");
-			r0c0.value=box;
-		}
-		function check(userE,tableK){
-			var re = /[0-9]/; /*regular expression to check if the input is in the correct format*/
-			var user=document.getElementById(userE).value;
-			var key=document.getElementById(tableK).value;
-			if(user==key && user.match(re)!=null){
-				encp.value=user;	
-			}else{
-				encp.value=user;
-				encp.style.color="ff0000";	
-			}
-		}
-		
-		
-	</script>
+    <script type="text/javascript"src="./functions/puzzle.js">
+    </script>
   </head>
 
   <body>
@@ -32,17 +15,17 @@
     <colgroup><col><col><col>
     <colgroup><col><col><col>
     <tbody>
-     <tr> <td id="r0c0"></br> <button onclick="enter()"> <td id="r0c1"> </br> <button onclick="enter()">  <td id="r0c2"> </br> <button onclick="enter()">  <td id="r0c3"> </br> <button onclick="enter()">  <td id="r0c4"> </br> <button onclick="enter()">  <td id="r0c5"> </br> <button onclick="enter()">  <td id="r0c6"> </br> <button onclick="enter()">  <td id="r0c7"> </br> <button onclick="enter()">  <td id="r0c8"> </br> <button onclick="enter()">
-     <tr> <td id="r1c0"> </br> <button onclick="enter()"> <td id="r1c1"> </br> <button onclick="enter()">  <td id="r1c2"> </br> <button onclick="enter()">  <td id="r1c3"> </br> <button onclick="enter()">  <td id="r1c4"> </br> <button onclick="enter()">  <td id="r1c5"> </br> <button onclick="enter()">  <td id="r1c6"> </br> <button onclick="enter()">  <td id="r1c7"> </br> <button onclick="enter()">  <td id="r1c8"> </br> <button onclick="enter()">
-     <tr> <td id="r2c0"> </br> <button onclick="enter()"> <td id="r2c1"> </br> <button onclick="enter()">  <td id="r2c2">6 </br> <button onclick="enter()">  <td id="r2c3"> </br> <button onclick="enter()">  <td id="r2c4"> </br> <button onclick="enter()">  <td id="r2c5"> </br> <button onclick="enter()">  <td id="r2c6"> </br> <button onclick="enter()">  <td id="r2c7"> </br> <button onclick="enter()">  <td id="r2c8"> </br> <button onclick="enter()"> 
+     <tr> <td id="00"></br> <button onclick="enter(00)"> </td> <td id="01"> </br> <button onclick="enter()"> </td> <td id="02"> </br> <button onclick="enter()"> </td> <td id="03"> </br> <button onclick="enter()"> </td> <td id="04"> </br> <button onclick="enter()"> </td> <td id="05"> </br> <button onclick="enter()"> </td> <td id="06"> </br> <button onclick="enter()"> </td> <td id="07"> </br> <button onclick="enter()"> </td> <td id="08"> </br> <button onclick="enter()">
+     <tr> <td id="10"> </br> <button onclick="enter()"> </td> <td id="11"> </br> <button onclick="enter()"> </td> <td id="12"> </br> <button onclick="enter()"> </td> <td id="13"> </br> <button onclick="enter()"> </td> <td id="14"> </br> <button onclick="enter()"> </td> <td id="15"> </br> <button onclick="enter()"> </td> <td id="16"> </br> <button onclick="enter()"> </td> <td id="17"> </br> <button onclick="enter()"> </td> <td id="18"> </br> <button onclick="enter()"> </td>
+     <tr> <td id="20"> </br> <button onclick="enter()"> </td> <td id="21"> </br> <button onclick="enter()"> </td> <td id="22"> </br> <button onclick="enter()"> </td> <td id="23"> </br> <button onclick="enter()"> </td> <td id="24"> </br> <button onclick="enter()"> </td> <td id="25"> </br> <button onclick="enter()"> </td> <td id="26"> </br> <button onclick="enter()"> </td> <td id="27"> </br> <button onclick="enter()"> </td> <td id="28"> </br> <button onclick="enter()"> </td>
     <tbody>
-     <tr> <td id="r3c0"> </br> <button onclick="enter()"> <td id="r3c1"> </br> <button onclick="enter()">  <td id="r3c2"> </br> <button onclick="enter()">  <td id="r3c3"> </br> <button onclick="enter()">  <td id="r3c4"> </br> <button onclick="enter()">  <td id="r3c5"> </br> <button onclick="enter()">  <td id="r3c6"> </br> <button onclick="enter()">  <td id="r3c7"> </br> <button onclick="enter()">  <td id="r3c8"> </br> <button onclick="enter()"> 
-     <tr> <td id="r4c0"> </br> <button onclick="enter()"> <td id="r4c1"> </br> <button onclick="enter()">  <td id="r4c2"> </br> <button onclick="enter()">  <td id="r4c3"> </br> <button onclick="enter()"> <td id="r4c4"> </br> <button onclick="enter()">  <td id="r4c5"> </br> <button onclick="enter()">  <td id="r4c6"> </br> <button onclick="enter()">  <td id="r4c7"> </br> <button onclick="enter()">  <td id="r4c8"> </br> <button onclick="enter()">
-     <tr> <td id="r5c0"> <td id="r5c1">  <td id="r5c2">  <td id="r5c3">  <td id="r5c4">  <td id="r5c5">  <td id="r5c6">  <td id="r5c7">3  <td id="r5c8"> 
+     <tr> <td id="30"> </br> <button onclick="enter()"> </td> <td id="31"> </br> <button onclick="enter()"> </td> <td id="32"> </br> <button onclick="enter()"> </td> <td id="33"> </br> <button onclick="enter()"> </td> <td id="34"> </br> <button onclick="enter()"> </td> <td id="35"> </br> <button onclick="enter()"> </td> <td id="36"> </br> <button onclick="enter()"> </td> <td id="37"> </br> <button onclick="enter()"> </td> <td id="38"> </br> <button onclick="enter()"> </td>
+     <tr> <td id="40"> </br> <button onclick="enter()"> </td> <td id="41"> </br> <button onclick="enter()"> </td> <td id="42"> </br> <button onclick="enter()"> </td> <td id="43"> </br> <button onclick="enter()"> </td> <td id="44"> </br> <button onclick="enter()"> </td> <td id="45"> </br> <button onclick="enter()"> </td> <td id="46"> </br> <button onclick="enter()"> </td> <td id="47"> </br> <button onclick="enter()"> </td> <td id="48"> </br> <button onclick="enter()"> </td>
+     <tr> <td id="50"> </br> <button onclick="enter()"> </td> <td id="51"> </br> <button onclick="enter()"> </td> <td id="52"> </br> <button onclick="enter()"> </td> <td id="53"> </br> <button onclick="enter()"> </td> <td id="54"> </br> <button onclick="enter()"> </td> <td id="55">  <td id="56"> </br> <button onclick="enter()"> </td> <td id="57"> </br> <button onclick="enter()"> </td> <td id="58"> </br> <button onclick="enter()"> </td>
     <tbody>
-     <tr> <td id="r6c0">9 <td id="r6c1">  <td id="r6c2">  <td id="r6c3">  <td id="r6c4">5  <td id="r6c5">  <td id="r6c6">  <td id="r6c7">  <td id="r6c8"> 
-     <tr> <td id="r7c0"> <td id="r7c1">  <td id="r7c2">  <td id="r7c3">  <td id="r7c4">  <td id="r7c5">  <td id="r7c6">  <td id="r7c7">  <td id="r7c8">
-     <tr> <td id="r8c0"> <td id="r8c1">  <td id="r8c2">  <td id="r8c3">  <td id="r8c4">  <td id="r8c5">  <td id="r8c6">  <td id="r8c7">  <td id="r8c8">5
+     <tr> <td id="60"> </br> <button onclick="enter()"> </td> <td id="61"> </br> <button onclick="enter()"> </td> <td id="62"> </br> <button onclick="enter()"> </td> <td id="63"> </br> <button onclick="enter()"> </td> <td id="64"> </br> <button onclick="enter()"> </td> <td id="65"> </br> <button onclick="enter()"> </td> <td id="66"> </br> <button onclick="enter()"> </td> <td id="67"> </br> <button onclick="enter()"> </td> <td id="68"> </br> <button onclick="enter()"> </td>
+     <tr> <td id="70"> </br> <button onclick="enter()"> </td> <td id="71"> </br> <button onclick="enter()"> </td> <td id="72"> </br> <button onclick="enter()"> </td> <td id="73"> </br> <button onclick="enter()"> </td> <td id="74"> </br> <button onclick="enter()"> </td> <td id="75"> </br> <button onclick="enter()"> </td> <td id="76"> </br> <button onclick="enter()"> </td> <td id="77"> </br> <button onclick="enter()"> </td> <td id="78"> </br> <button onclick="enter()"> </td>
+     <tr> <td id="80"> </br> <button onclick="enter(80)"> </td> <td id="81"> </br> <button onclick="enter(81)"> </td> <td id="82"> </br> <button onclick="enter(82)"> </td> <td id="83"> </br> <button onclick="enter(83)"> </td> <td id="84"> </br> <button onclick="enter(84)"> </td> <td id="85"> </br> <button onclick="enter(85)"> </td> <td id="86"> </br> <button onclick="enter(86)"> </td> <td id="87"> </br> <button onclick="enter(87)"> </td> <td id="88"> </br> <button onclick="enter(88)"> </td>
     </table>
   </body>
 </html>
