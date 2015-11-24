@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{
+	background-image:;
+	background-repeat: no-repeat;
+}*/
+table{
+	border-collapse: collapse; font-family: Calibri, sans-serif;
+	margin: 0 auto;
+}
+colgroup, tbody { 
+	border: solid medium;
+}
+td { 
+	border: solid thin; height: 4.5em; width: 4.5em; text-align: center; padding: 0; 
+}
