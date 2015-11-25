@@ -10,31 +10,59 @@
 
   <body>
 	<table>
-    <caption>Sudoku</caption>
+    <caption><b>Sudoku</b></caption>
     <colgroup><col><col><col>
     <colgroup><col><col><col>
     <colgroup><col><col><col>
     <tbody>
-     <tr> <td><input id="00" type="text"></td> <td><input id="01" type="text"></td> <td><input id="02" type="text"></td> <td><b>2</b><!--id="03"--></td> <td><b>6</b><!--id="04"--></td> <td><input type="text" id="05"></td> <td><b>7</b><!--id="06"--></td> <td><input id="07" type="text"></td><td> <b>1</b><!--id="08"--></td>
+    	<!-- ROW 1-->
+     <tr> 	<td><input id="00" type="text"></td> <td><input id="01" type="text"></td>  <td><input id="02" type="text"></td> 
+     		<td><b>2</b><!--id="03"--></td> 	 <td><b>6</b><!--id="04"--></td> 	   <td><input type="text" id="05"></td> 
+     		<td><b>7</b><!--id="06"--></td> 	 <td><input id="07" type="text"></td>  <td> <b>1</b><!--id="08"--></td>
      
-     <tr> <td><b>6</b><!--id="10"--></td> <td><b>8</b><!--id="11"--></td> <td><input id="12" type="text"></td> <td><input id="13" type="text"></td> <td><b>7</b><!--id="14"--></td> <td><input id="15" type="text"></td> <td><input id="16" type="text"></td> <td><b>9</b><!--id="17"--></td> <td><input id="18" type="text"></td>
+     	<!-- ROW 2-->
+     <tr> 	<td><b>6</b><!--id="10"--></td>      <td><b>8</b><!--id="11"--></td> 	   <td><input id="12" type="text"></td> 
+     		<td><input id="13" type="text"></td> <td><b>7</b><!--id="14"--></td> 	   <td><input id="15" type="text"></td> 
+            <td><input id="16" type="text"></td> <td><b>9</b><!--id="17"--></td> 	   <td><input id="18" type="text"></td>
      
-     <tr> <td><b>1</b><!--id="20"--></td> <td><b>9</b><!--id="21"--></td> <td><input id="22" type="text"></td> <td><input id="23" type="text"></td> <td><input id="24" type="text"></td> <td><b>4</b><!--id="25"--></td> <td><b>5</b><!--id="26"--></td> <td><input id="27" type="text"></td> <td><input id="28"></td>
+     	<!-- ROW 3-->
+     <tr> 	<td><b>1</b><!--id="20"--></td> 	 <td><b>9</b><!--id="21"--></td> 	   <td><input id="22" type="text"></td> 
+     		<td><input id="23" type="text"></td> <td><input id="24" type="text"></td>  <td><b>4</b><!--id="25"--></td> 
+            <td><b>5</b><!--id="26"--></td> 	 <td><input id="27" type="text"></td>  <td><input id="28"></td>
     <tbody>
      
-     <tr> <td id="30">8</br> </td> <td id="31">2</br> </td> <td id="32"> </br> <button onclick="enter('32')"> </td> <td id="33">1</br> </td> <td id="34"> </br> <button onclick="enter('34')"> </td> <td id="35"> </br> <button onclick="enter('35')"> </td> <td id="36"> </br> <button onclick="enter('36')"> </td> <td id="37">4</br> </td> <td id="38"> </br> <button onclick="enter('38')"> </td>
+     	<!-- ROW 4-->
+     <tr> 	<td><b>8</b><!--id="30"--></td> 	 <td><b>2</b><!--id="31"--></td> 	   <td><input id="32" tpye="text"></td> 
+     		<td><b>1</b><!--id="33"--></td> 	 <td><input id="34" type="text"></td>  <td><input id="35" type="text"></td>
+            <td><input id="36" type="text"></td> <td><b>4</b><!--id="37"--></td> 	   <td><input id="38" type="text"></td>
      
-     <tr> <td id="40"> </br> <button onclick="enter('40')"> </td> <td id="41"> </br> <button onclick="enter('41')"> </td> <td id="42">4</br> </td> <td id="43">6</br> </td> <td id="44"> </br> <button onclick="enter('44')"> </td> <td id="45">2</br> </td> <td id="46">9</br> </td> <td id="47"> </br> <button onclick="enter('47')"> </td> <td id="48"> </br> <button onclick="enter('48')"> </td>
-     <tr> <td id="50"> </br> <button onclick="enter('50')"> </td> <td id="51">5</br> </td> <td id="52"> </br> <button onclick="enter('52')"> </td> <td id="53"> </br> <button onclick="enter('53')"> </td> <td id="54"> </br> <button onclick="enter('54')"> </td> <td id="55">3</br>  <td id="56"> </br> <button onclick="enter('56')"> </td> <td id="57">2</br> </td> <td id="58">8</br>  </td>
+     	<!-- ROW 5-->
+     <tr> 	<td><input id="40" type="text"></td> <td><input id="41" type="text"></td>  <td><b>4</b><!--id="42"--></td>
+     		<td><b>6</b><!--id="43"--></td> 	 <td><input id="44" type="text"></td>  <td><b>2</b><!--id="45"--></td>
+            <td><b>9</b><!--id="46"--></td> 	 <td><input id="47" type="text"></td>  <td><input id="48" type="text"></td>
+     
+     	<!-- ROW 6-->
+     <tr> 	<td><input id="50" type="text"></td> <td><b>5</b><!--id="51"--></td> 	   <td><input id="52" type="text"></td>
+     		<td><input id="53" type="text"></td> <td><input id="54" type="text"></td>  <td><b>3</b><!--id="55"--></td>
+            <td><input id="56" type="text"></td> <td><b>2</b><!--id="57"--></td> 	   <td><b>8</b><!--id="58"--></td>
     <tbody>
      
-     <tr> <td id="60"> </br> <button onclick="enter('60')"> </td> <td id="61"> </br> <button onclick="enter('61')"> </td> <td id="62">9</br> </td> <td id="63">3</br> </td> <td id="64"> </br> <button onclick="enter('64')"> </td> <td id="65"> </br> <button onclick="enter('65')"> </td> <td id="66"> </br> <button onclick="enter('66')"> </td> <td id="67">7</br> </td> <td id="68">4</br> </td>
+     	<!-- ROW 7-->
+     <tr> 	<td><input id="60" type="text"></td> <td><input id="61" type="text"></td> <td><b>9</b><!--id="62"--></td>
+     		<td><b>3</b><!--id="63"--></td>      <td><input id="64" type="text"></td> <td><input id="65" type="text"></td> 
+            <td><input id="66" type="text"></td> <td><b>7</b><!--id="67"--></td>      <td><b>4</b><!--id="68"--></td>
      
-     <tr> <td id="70"> </br> <button onclick="enter('70')"> </td> <td id="71">4</br> </td> <td id="72"> </br> <button onclick="enter('72')"> </td> <td id="73"> </br> <button onclick="enter('73')"> </td> <td id="74">5</br> </td> <td id="75"> </br> <button onclick="enter('75')"> </td> <td id="76"> </br> <button onclick="enter('76')"> </td> <td id="77">3</br> </td> <td id="78">6</br> </td>
+     	<!-- ROW 8-->
+     <tr> 	<td><input id="70" type="text"></td> <td><b>4</b><!--id="71"--></td> 	 <td><input id="72" type="text"></td>
+     		<td><input id="73" type="text"></td> <td><b>5</b><!--id="74"--></td> 	 <td><input id+"75" type="text"> </td>
+            <td><input id="76" type="text"></td> <td><b>3</b><!--id="77"--></td> 	 <td><b>6</b><!--id="78"--></td>
      
-     <tr> <td id="80">7</br> </td> <td id="81"> </br> <button onclick="enter('81')"> </td> <td id="82">3</br> </td> <td id="83"> </br> <button onclick="enter('83')"> </td> <td id="84">1</br> </td> <td id="85">8</br> </td> <td id="86"> </br> <button onclick="enter('86')"> </td> <td id="87"> </br> <button onclick="enter('87')"> </td> <td id="88"> </br> <button onclick="enter('88')"> </td>
+     	<!-- ROW 9-->
+     <tr> 	<td><b>7</b><!--id="80"--></td> 	 <td><input id="81" type="text"></td> <td><b>3</b><!--id="82"--></td>
+     		<td><input id="83" type="text"></td> <td><b>1</b><!--id="84"--></td>	  <td><b>8</b><!--id="85"--></td> 
+            <td><input id="86" type="text"></td> <td><input id="87" type="text"></td> <td><input id="88" type="text"></td>
     </table>
  <p>
-    <input type="submit" value="Check" onclick="check()"> 
+  <input type="submit" value="Check" onclick="checkTest()"> 
   </body>
 </html>
