@@ -14,13 +14,13 @@
 	}
 }*/
 function checkTest(){
-	var val=document.getElementById("00").value;
-	if(val==5){
+	var val=document.getElementById("00");
+	if(val.value==5){
 		val.value="X";
 		val.style.color="ff0000";
 	}else{
 		val.value="Y";
-		val.stlye.color="00ff00";
+		val.style.color="00ff00";
 	}
 }
 
@@ -38,12 +38,16 @@ function check(){
 				
 	for(var x=0;x<9;x++){
 		for(var y=0;y<9;y++){
-			var val=document.getElementById("x"+"y").value;
+			var loc= x+"";
+			var loc2= y+"";
+			loc=loc+loc2;
+			var val=document.getElementById(loc);
 			var key=key1[x][y];
-			if(val==key){
+			if(val.value==key|| val.value==""){
 				/* Do Nothing */	
 			}else{
-				val="X";	
+				val.value="X";
+				val.style.color="#ff0000";	
 			}
 		}
 	}
