@@ -44,9 +44,11 @@ function check(){
 			loc=loc+loc2;
 			var val=document.getElementById(loc);
 			var key=key1[x][y];
-			if(val.value == key || val.value==""){
+			if(val.value==key){
 				/* Increment count for win */
 				count++;	
+			}else if(val.value==""){
+				/* Empty cell */
 			}else{
 				val.value="X";
 				/*val.style.color="#ff0000";*/	
@@ -54,7 +56,10 @@ function check(){
 		}
 	}
 	
-	if(count>= 45){
+	if(count >= 45){
 		location.assign("WinPage.html");
 	}
+}
+function SHome(){
+	location.assign("SudokuHome.html");	
 }
