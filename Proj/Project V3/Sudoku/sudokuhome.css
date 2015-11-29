@@ -2,17 +2,31 @@
 /* CSS Document */
 html{
 	background-image: url("Sudoku.jpg");
-	background-size:cover;
+	background-size:auto;
 	background-repeat:no-repeat;
+	background-attachment:fixed;
 }
 #easy{
 	position:fixed;
-	right: 10px;
+	right: 20px;
 	top: 10px;
 	background-color:#6CC;
 	border:outset;
 	/*border-size: 15px;*/
 	border-color:#000000;
-	width: 3.5em;
-	height: 3.5em;
+	width: 5em;
+	height: 3em;
+	text-align:center;
+}
+#medium{
+	position:fixed;
+	right: 20px;
+	top: 70px;
+	background-color:#6CC;
+	border:outset;
+	/*border-size: 15px;*/
+	border-color:#000000;
+	width: 5em;
+	height: 3em;
+	text-align:center;
 }
