@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<script type="text/javascript" src="./functions/checkout.js">
+	</script>
+	</head>
+	<body>
+    	<div>Display the Order</div>
+        <script>
+		//Initialize the data
+		var $strOrd=sessionStorage.getItem("order");
+		var $order=JSON.parse($strOrd);
+		//
+		var $start=0;
+		var $end=$order.length;
+		//
+		for(var i=$start; i<$end; i++){
+			var $ord=$order[i];
+			var strRow=$ord['name']+"</br>";
+				strRow+=$ord['price']+"</br>";
+				strRow+=$ord['amount']+"</br>";
+				document.write(strRow);	
+		}
+		</script>
+	</body>
+</html>

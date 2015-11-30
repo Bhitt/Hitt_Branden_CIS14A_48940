@@ -10,7 +10,6 @@
 
   <body>
   <div class="nav">
-      <div class="container">
         <ul>
           <li><a href="HomePage.html">Home</a></li>
           <li><a href="Browse.html">Browse</a></li>
@@ -18,25 +17,37 @@
           <li><a href="LogIn.html">Log In</a></li>
           <li><a href="Help.html">Help</a></li>
         </ul>
-      </div>
     </div>
-    <div class="listings">
     	<table id="lTable">
         <tbody>
         	<tr>
-            	<td><img src="placeholder.png" /></br>Listing 1</br><input id="listing1" type="button" onclick="addCart(listing1)" value="Add to Cart" /></td><br />
-				<td><img src="placeholder.png" /></br>Listing 2</br><input id="listing2" type="button" onclick="addCart(listing2)" value="Add to Cart" /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 3</br><input id="listing3" type="button" onclick="addCart(listing3)" value="Add to Cart" /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 4</br><input id="listing4" type="button" onclick="addCart(listing4)" value="Add to Cart" /></td><br />
+            	<td><img src="placeholder.png" /></br>Listing 1   $<span id="p1">4.50</span></br><input id="listing1" type="button" onclick="addCart('ls1')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls1')" value="Delete from Cart"  /></br>
+                	<input id="ls1" value="0" disabled /></td><br />
+				<td><img src="placeholder.png" /></br>Listing 2  $<span id="p2">8.99</span></br><input id="listing2" type="button" onclick="addCart('ls2')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls2')" value="Delete from Cart"  /></br>
+                	<input id="ls2" value="0" disabled /></td><br />
+                <td><img src="placeholder.png" /></br>Listing 3  $<span id="p3">6.50</span></br><input id="listing3" type="button" onclick="addCart('ls3')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls3')" value="Delete from Cart"  /></br>
+                	<input id="ls3" value="0" disabled /></td><br />
+                <td><img src="placeholder.png" /></br>Listing 4  $<span id="p4">8.50</span></br><input id="listing4" type="button" onclick="addCart('ls4')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls4')" value="Delete from Cart"  /></br>
+                	<input id="ls4" value="0" disabled /></td><br />
             <tr>
-            	<td><img src="placeholder.png" /></br>Listing 5</br><input id="listing5" type="button" onclick="addCart(listing5)" value="Add to Cart" /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 6</br><input id="listing6" type="button" onclick="addCart(listing6)" value="Add to Cart" /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 7</br><input id="listing7" type="button" onclick="addCart(listing7)" value="Add to Cart" /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 8</br><input id="listing8" type="button" onclick="addCart(listing8)" value="Add to Cart" /></td><br />
+            	<td><img src="placeholder.png" /></br>Listing 5  $<span id="p5">5.99</span></br><input id="listing5" type="button" onclick="addCart('ls5')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls5')" value="Delete from Cart"  /></br>
+                	<input id="ls5" value="0" disabled /></td><br />
+                <td><img src="placeholder.png" /></br>Listing 6  $<span id="p6">3.50</span></br><input id="listing6" type="button" onclick="addCart('ls6')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls6')" value="Delete from Cart"  /></br>
+                	<input id="ls6" value="0" disabled /></td><br />
+                <td><img src="placeholder.png" /></br>Listing 7  $<span id="p7">7.50</span></br><input id="listing7" type="button" onclick="addCart('ls7')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls7')" value="Delete from Cart"  /></br>
+                	<input id="ls7" value="0" disabled /></td><br />
+                <td><img src="placeholder.png" /></br>Listing 8  $<span id="p8">5.50</span></br><input id="listing8" type="button" onclick="addCart('ls8')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls8')" value="Delete from Cart"  /></br>
+                	<input id="ls8" value="0" disabled /></td><br />
         </tbody>
         </table>
         <input type="submit" onclick="subOrder()" />
-        
-    </div>
   </body>
 </html>
