@@ -16,15 +16,6 @@ function Product(name,price,amount){
 		 price: 15.99,
 		 amount: 2}
 	];*/
-/*starting amounts for cart
-var ls1=0;	
-var ls2=0;
-var ls3=0;
-var ls4=0;
-var ls5=0;
-var ls6=0;
-var ls7=0;
-var ls8=0;*/
 function addCart(loc){
 	var val=document.getElementById(loc);
 	val.value++;
@@ -50,39 +41,14 @@ function cOrder(){
 function subOrder(){
 	/*create the order*/
 	var order=cOrder();
-	/*display the orders*/
-	/*document.write("Length of order array = "+order.length+"</br>");
-	for(var i=0;i<order.length;i++){
-		var obj=order[i];
-		for(var prop in obj){
-			document.write(prop+"="+obj[prop]+"</br>");
-		}
-	}*/
 	/*convert to a string*/
 	var str=JSON.stringify(order);
-	/*document.write(str);*/
 	var object=JSON.parse(str);
-	/*display the order*/
-	/*document.write("Length of order array = "+object.length+"</br>");
-	for(var i=0;i<object.length;i++){
-		var obj=object[i];
-		for(var prop in obj){
-			document.write(prop+"="+obj[prop]+"</br>");
-		}
-	}*/
 	/*testing local storage*/
 	var ssObj=sessionStorage;
 	ssObj.clear();
-	/*document.write("</br> Display all the local storage before setting </br>");
-	for(var name in lsObj){
-        document.write(name+"="+lsObj[name]+"<br/>");
-        }*/
     //Set a property in local storage
     //With the api
     ssObj.setItem("order", str);
-    /*document.write("</br> Display all the local storage after setting </br>");
-    for(var name in lsObj){
-       document.write(name+"="+lsObj[name]+"<br/>");
-       }*/
-	 location.assign("Checkout.html");
+	location.assign("Checkout.html");
 }
