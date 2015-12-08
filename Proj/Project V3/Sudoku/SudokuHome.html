@@ -12,11 +12,19 @@
 		function medium(){
 			location.assign("PuzzlePage2.html");	
 		}
+		function hard(){
+			location.assign("PuzzlePage3.html");	
+		}
+		function howTo(){
+			location.assign("HowTo.html");	
+		}
 	</script>
 	<body>
     	<section>
+        <input type="submit" value="How to play" onclick="howTo()" id="howto">
         <input type="submit" value="Easy" onclick="easy()" id="easy">
         <input type="submit" value="Medium" onclick="medium()" id="medium">
+        <input type="submit" value="Hard" onclick="hard()" id="hard">
         </section>
 	</body>
 
