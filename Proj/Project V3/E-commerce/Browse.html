@@ -21,33 +21,35 @@
     	<table id="lTable">
         <tbody>
         	<tr>
-            	<td><img src="placeholder.png" /></br>Listing 1   $<span id="p1">4.50</span></br><input id="listing1" type="button" onclick="addCart('ls1')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls1')" value="Delete from Cart"  /></br>
+            	<td><img src="placeholder.png" /></br>Listing 1   $<span id="p1">4.50</span></br><input id="listing1" type="button" onclick="addCart('ls1','p1')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls1','p1')" value="Delete from Cart"  /></br>
                 	<input id="ls1" value="0" disabled /></td><br />
-				<td><img src="placeholder.png" /></br>Listing 2  $<span id="p2">8.99</span></br><input id="listing2" type="button" onclick="addCart('ls2')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls2')" value="Delete from Cart"  /></br>
+				<td><img src="placeholder.png" /></br>Listing 2  $<span id="p2">8.99</span></br><input id="listing2" type="button" onclick="addCart('ls2','p2')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls2','p2')" value="Delete from Cart"  /></br>
                 	<input id="ls2" value="0" disabled /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 3  $<span id="p3">6.50</span></br><input id="listing3" type="button" onclick="addCart('ls3')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls3')" value="Delete from Cart"  /></br>
+                <td><img src="placeholder.png" /></br>Listing 3  $<span id="p3">6.50</span></br><input id="listing3" type="button" onclick="addCart('ls3','p3')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls3','p3')" value="Delete from Cart"  /></br>
                 	<input id="ls3" value="0" disabled /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 4  $<span id="p4">8.50</span></br><input id="listing4" type="button" onclick="addCart('ls4')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls4')" value="Delete from Cart"  /></br>
+                <td><img src="placeholder.png" /></br>Listing 4  $<span id="p4">8.50</span></br><input id="listing4" type="button" onclick="addCart('ls4','p4')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls4','p4')" value="Delete from Cart"  /></br>
                 	<input id="ls4" value="0" disabled /></td><br />
             <tr>
-            	<td><img src="placeholder.png" /></br>Listing 5  $<span id="p5">5.99</span></br><input id="listing5" type="button" onclick="addCart('ls5')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls5')" value="Delete from Cart"  /></br>
+            	<td><img src="placeholder.png" /></br>Listing 5  $<span id="p5">5.99</span></br><input id="listing5" type="button" onclick="addCart('ls5','p5')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls5','p5')" value="Delete from Cart"  /></br>
                 	<input id="ls5" value="0" disabled /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 6  $<span id="p6">3.50</span></br><input id="listing6" type="button" onclick="addCart('ls6')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls6')" value="Delete from Cart"  /></br>
+                <td><img src="placeholder.png" /></br>Listing 6  $<span id="p6">3.50</span></br><input id="listing6" type="button" onclick="addCart('ls6','p6')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls6','p6')" value="Delete from Cart"  /></br>
                 	<input id="ls6" value="0" disabled /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 7  $<span id="p7">7.50</span></br><input id="listing7" type="button" onclick="addCart('ls7')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls7')" value="Delete from Cart"  /></br>
+                <td><img src="placeholder.png" /></br>Listing 7  $<span id="p7">7.50</span></br><input id="listing7" type="button" onclick="addCart('ls7','p7')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls7','p7')" value="Delete from Cart"  /></br>
                 	<input id="ls7" value="0" disabled /></td><br />
-                <td><img src="placeholder.png" /></br>Listing 8  $<span id="p8">5.50</span></br><input id="listing8" type="button" onclick="addCart('ls8')" value="Add to Cart" />
-                	<input type="button" onclick="delCart('ls8')" value="Delete from Cart"  /></br>
+                <td><img src="placeholder.png" /></br>Listing 8  $<span id="p8">5.50</span></br><input id="listing8" type="button" onclick="addCart('ls8','p8')" value="Add to Cart" />
+                	<input type="button" onclick="delCart('ls8','p8')" value="Delete from Cart"  /></br>
                 	<input id="ls8" value="0" disabled /></td><br />
         </tbody>
         </table>
+        <input disabled id="total" value=0.00 />
         <input type="submit" onclick="subOrder()" value="Proceed To Checkout"/>
+        <input type="submit" onclick="subOrder()" value="Save and Continue Shopping"/>
   </body>
 </html>
