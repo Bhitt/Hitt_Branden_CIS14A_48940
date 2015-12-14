@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<script>/* Purpose: If 
+			Branden Hitt
+			9/14/15
+			*/
+		</script>
+		<meta charset="utf-8">
+		<title>paycheck with If constructs</title>
+</head>
+
+  <body>
+	<script type="text/javascript">
+		//Input hours and payrate, output check
+		var hours=prompt("What were your hours?");
+		var rate=prompt("What is your rate?");
+		var pay;
+		if(hours<=0) pay=0;
+		if(hours>0 && hours<=20) pay=hours*rate;
+		if(hours>20 && hours<=40) pay=(20*rate)+((hours-20)*(2*rate));
+		if(hours>40) pay=(20*rate)+((20)*(2*rate))+((hours-40)*(rate*3));
+		document.write("<p>Your pay is " + pay + "</p>"); 
+	</script>
+  </body>
+</html>

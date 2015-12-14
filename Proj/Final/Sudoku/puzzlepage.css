@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	background-image: url("Blank.jpg");
+	background-size:auto;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+table{
+	border-collapse: collapse;
+	font-family: Calibri, sans-serif;
+	margin: 0 auto;
+	background-color:#6CC;
+}
+colgroup, tbody { 
+	border: solid medium;
+}
+td { 
+	border: solid thin;
+	height: 4.5em; 
+	width: 4.5em; 
+	text-align: center; 
+	padding: 0; 
+}
+
+input{
+	text-align:center;
+	border:none;
+	width: 4.5em;
+	height: 4.5em;
+	background:none;
+}
+#check{
+	text-align:center;
+	border:outset;
+	position:fixed;
+	right: 10px;
+	top: 10px;
+	background-color:#6CC;
+	border-size: 15px;
+	border-color:#000;
+	width: 5em;
+	height: 3em;
+}
+#home{
+	text-align:center;
+	border:outset;
+	position:fixed;
+	right: 10px;
+	top: 70px;
+	background-color:#6CC;
+	/*border-size: 15px;*/
+	border-color:#000;
+	width: 5em;
+	height: 3em;
+}
+.given{
+	font-size:16px;
+	font-weight: bold;
+	font-family: Calibri, sans-serif;
+	color: #000;	
+}
+caption{
+	border:solid;
+	background-color:#6CC;	
+}
+#stats{
+	border: solid thin;
+	
+	text-align: center; 
+	padding: 0; 	
+}
+#Correct{
+	position: relative;
+	text-align:center;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+	font-size:16px;
+	color: #000;
+	height: 3em; 
+	width: 13em; 
+}
+#Mistakes{
+	position: relative;
+	text-align:center;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+	font-size:16px;
+	color: #000;
+	height: 3em; 
+	width: 13em;	
+}
+#Remaining{
+	position: relative;
+	text-align:center;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+	font-size:16px;
+	color: #000;
+	height: 3em; 
+	width: 13em;	
+}

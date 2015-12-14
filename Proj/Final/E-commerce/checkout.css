@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+ul{
+	color:black;
+}
+.nav a {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 10px;
+  text-transform: uppercase;
+}
+
+.nav li{
+    display:inline;    
+}
+#Order{
+	border:thin;	
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Clear passengers for flight</title>
+	<script>
+		/*
+			* Objective: write code to make sure passengers meet certain conditions before they board (e.g. not on no-fly list, has paid for flight)
+			
+			* If we wrote code with a function for each condition, we would notice that the functions look very similar:
+			
+			function checkPaid(passengers) {
+				for (var i = 0; i < passengers.length; i++) {
+					if (!passengers[i].paid) {
+						return false;
+					}
+				}
+				return true;
+			}
+			function checkNoFly(passengers) {
+				for (var i = 0; i < passengers.length; i++) {
+					if (onNoFlyList(passengers[i].name)) {
+						return false;
+					}
+				}
+				return true;
+			}
+			function printPassengers(passengers) {
+				for (var i = 0; i < passengers.length; i++) {
+					console.log(passengers[i].name);
+					return false;
+				}
+				return true;
+			}
+			
+			* This code is repetitive, and would be hard to change if the data structure holding the passengers changes from a simple array of objects to something else
+			* These problems can be solved by writing a first class function that knows how to iterate through the passengers, and pass to that function a second function that can do the checks we need
+		
+		*/
+		
+		// this is a function that takes passengers and another function that knows how to do the tests
+		
+		var passengers = [ { name: "Jane Doloop", paid: true },
+		                   { name: "Dr. Evel", paid: true },
+		                   { name: "Sue Property", paid: false },
+		                   { name: "John Funcall", paid: true } ];
+		function processPassengers(passengers, testFunction) { 
+			for (var i = 0; i < passengers.length; i++) { 
+				if (testFunction(passengers[i])) { 
+					return false; 
+				}
+			}
+			return true; // if we get here, then all passengers have passed the test
+		}
+		function checkNoFlyList(passenger) {
+			return (passenger.name === "Dr. Evel"); // 
+		}
+		function checkNotPaid(passenger) {
+			return (!passenger.paid); // if the passenger has not paid, true is returned
+		}
+		var allCanFly = processPassengers(passengers, checkNoFlyList); // 
+		if (!allCanFly) { // if
+			console.log("The plane can't take off: we have a passenger on the no-fly-list.");
+		}
+		var allPaid = processPassengers(passengers, checkNotPaid); 
+		if (!allPaid) { // same logical as allCanFly above
+			console.log("The plane can't take off: not everyone has paid.");
+		}
+		
+		
+		function printPassenger(passenger) {
+			var message = passenger.name;
+			if (passenger.paid === true) {
+				message = message + " has paid";
+			} else {
+				message = message + " has not paid";
+			}
+				console.log(message);
+			return false; 
+		}
+		processPassengers(passengers, printPassenger);
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

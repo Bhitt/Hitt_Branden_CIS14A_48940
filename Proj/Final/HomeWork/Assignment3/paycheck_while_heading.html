@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>While Loop</title>
+	<script>
+	/* 
+		Branden Hitt
+		Sept 21st, 2015
+		Purpose: Logical Operators
+	*/
+	</script>
+
+	</head>
+
+	<body>
+    <script>
+			//Declare Variables
+			var payRate=prompt("Calculate your first Paycheck Table \n Pay Rate $'s");
+			var payRat2=prompt("Calculate your second Paycheck Table \n Pay Rate $'s");
+			var nHours=85;//Total number of hours in table
+			var payChk=0;//Initialize the paycheck to 0
+			var payChk2=0;//Initialize the paycheck to 0
+			var dblTim=20;//Double time starts
+			var trpTim=40;//Triple time starts
+			var hours=-1;
+	</script>
+    <table width="200" border="1">
+    	<tr>
+        	<th>Hours</th>
+            <script>
+            document.write("<th>Pay Check $"+payRate+"/hr</th>");
+			</script>
+            <script>
+            document.write("<th>Pay Check 2 $"+payRate+"/hr</th>");
+			</script>
+        </tr>
+        <script>
+			//loop to fill the table
+			while(++hours<=nHours){
+				document.write("<tr>");
+					//first paycheck
+					if(hours<=dblTim){
+						payChk=hours*payRate;
+					}else if (hours<trpTim){
+						payChk=dblTim*payRate+(hours-dblTim)*2*payRate;
+					}else{
+						payChk=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
+					}
+					//second paycheck
+					if(hours<=dblTim){
+						payChk2=hours*payRat2;
+					}else if (hours<trpTim){
+						payChk2=dblTim*payRat2+(hours-dblTim)*2*payRat2;
+					}else{
+						payChk2=dblTim*payRat2+(trpTim-dblTim)*2*payRat2+(hours-trpTim)*3*payRat2;
+					}
+					document.write("<td>"+hours+"</td>");
+					document.write("<td>$"+payChk.toFixed(2)+"</td>");
+					document.write("<td>$"+payChk2.toFixed(2)+"</td>");
+				document.write("</tr>");
+			}
+        </script>
+        </table>
+	</body>
+</html>

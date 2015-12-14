@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+    <script type="text/javascript" src="getForm.js"></script>
+	</head>
+
+	<body>
+    	<script type="text/javascript">
+			//Objectify the form information
+			var url=document.location.href;
+			$_GET=getForm(url);
+			//Convert to string
+			var str=JSON.stringify($_GET);
+            var object=JSON.parse(str);
+            //Testing Local Storage
+            var lsObj=localStorage;
+            lsObj.clear();
+            //Set a property in local storage
+            //With the api
+            lsObj.setItem("users", str);
+			//
+			function logIn(){
+				location.assign("LogIn.html");	
+			}
+		</script>
+    	<p> Your username has been created. <p>
+        <input type="button" value="Log In" onclick="logIn()"/>
+	</body>
+</html>

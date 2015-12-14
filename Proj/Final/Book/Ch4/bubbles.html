@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>More Arrays with Bubbles</title>
+<script>
+//Objective: write a code that will print the total number of bubble scores followed by the highest score and each solution that has that score
+</script>
+</head>
+
+<body>
+<script>
+var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44];
+//create a while loop that will loop through and output all of the values
+var output; //Use this variable in the loop below to create a string to output
+var i = 0; //create a variable to keep track of the current index (initialize a counter)
+while(i < scores.length) { //keep looping while index is less than the length of the array
+	output = "Bubble solution #" + i + " score: " + scores[i]; //Then create a string to use as a line of output that includes the bubble solution number (which is just the array index) and the score
+	document.write(output);
+	i = i + 1; //increment the index by one before looping again.
+}
+</script>
+</body>
+</html>

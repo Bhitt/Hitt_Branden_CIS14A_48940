@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<script type="text/javascript" src="getForm.js"></script>
+	</head>
+
+	<body>
+		<script>
+			//Objectify the form information
+			var url=document.location.href;
+	    	$_GET=getForm(url);
+			//check local storage
+			var fromStorage=localStorage.getItem("users");
+			var users=JSON.parse(fromStorage);
+			var allGood=0;
+			//Parse string back, convert to an object and display
+			for(property in users){
+					if(users[property]==$_GET[property]){
+						allGood++;
+					}
+						
+					//document.write(property+"="+users[property]+"</br>");
+			}
+			if(allGood>=4){
+				document.write('<p>'+"You have been signed in"+'</p>');
+			}else{
+				document.write('<p>'+"Incorrect LogIn information"+'<p>');
+			}
+		</script>
+	</body>
+</html>

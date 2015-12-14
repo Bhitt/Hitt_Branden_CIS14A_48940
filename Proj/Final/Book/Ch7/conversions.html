@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Numbers vs strings</title>
+</head>
+
+<body>
+<script>
+if (99 == "99") {
+	document.write("A number equals a string!");
+} else {
+	document.write("No way a number equals a string");
+}
+/*
+--- "A number equals a string!" is logged to the console, so 99 == "99"
+--- JavaScript is smart enough to determine that 99 and “99” are the same for all practical purposes. But what exactly is going on behind the scenes to make this work?
+--- It turns out the == operator takes the types of its operands (that is, the two things you’re comparing) into account when it does a comparison. You can break this down into two cases: If the two values have the same type, just compare them, and if the two values have different types, try to convert them into the same type and then compare them
+--- conversion is only temporary, so that the comparison can happen
+*/
+</script>
+</body>
+</html>

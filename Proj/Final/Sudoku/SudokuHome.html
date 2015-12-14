@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+        <link href="sudokuhome.css" rel="stylesheet">
+	</head>
+	<script>
+		function easy(){
+			location.assign("PuzzlePage.html");
+		}
+		function medium(){
+			location.assign("PuzzlePage2.html");	
+		}
+		function hard(){
+			location.assign("PuzzlePage3.html");	
+		}
+		function howTo(){
+			alert("There is only one simple rule:\n Fill in the spaces so that each of the nine rows\n each of the nine columns, and each of the nine\n 3x3 sections contain all the numbers from 1 to 9.");
+		}
+	</script>
+	<body>
+    	<section>
+        <input type="submit" value="How to play" onclick="howTo()" id="howto">
+        <input type="submit" value="Easy" onclick="easy()" id="easy">
+        <input type="submit" value="Medium" onclick="medium()" id="medium">
+        <input type="submit" value="Hard" onclick="hard()" id="hard">
+        </section>
+	</body>
+
+</html>

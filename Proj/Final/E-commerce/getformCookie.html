@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Create the _Get Object</title>
+<script type="text/javascript" src="getForm.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//Objectify the form information
+		var url=document.location.href;
+		$_GET=getForm(url);
+		//Stringify the Object
+		var text=JSON.stringify($_GET)
+		//Parse the Object back
+		var obj=JSON.parse(text);
+		//Store the information
+		var key="FormObjectString";
+		setCookie(key,text,1);
+		//var fromStorage=getCookie(key);
+		//Parse string back, convert to an object and display
+		/*var objAgn=JSON.parse(fromStorage);
+		document.write("Recovery from Cookie </br>");
+		for(property in objAgn){
+				document.write(property+"="+objAgn[property]+"</br>");
+		}*/
+		function logIn(){
+			location.assign("LogIn.html");
+		}
+	</script>
+    	<p> Your username has been created. <p>
+        <input type="button" value="Log In" onclick="logIn()"/>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<script>/* Purpose: Ternary
+			Branden Hitt
+			9/14/15
+			*/
+		</script>
+		<meta charset="utf-8">
+		<title>paycheck with Ternary constructs</title>
+</head>
+  <body>
+	<script type="text/javascript">
+		//Input hours and payrate, output check
+		var hours=prompt("What were your hours?");
+		var rate=prompt("What is your rate?");
+		var pay = hours<=0  ? pay=0:
+				  hours<=20 ? pay=hours*rate://hours less than 20
+			      hours<=40 ? pay=(20*rate)+((hours-20)*(2*rate))://hours more than 20, <=40
+		                      pay=(20*rate)+((20)*(2*rate))+((hours-40)*(rate*3));//more than 40
+		document.write("<p>Your pay is " + pay + "</p>"); 
+	</script>
+  </body>
+</html>

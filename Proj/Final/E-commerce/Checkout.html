@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+    <link href="checkout.css" rel="stylesheet">
+	<script type="text/javascript" src="./functions/checkout.js">
+	</script>
+	</head>
+	<body>
+        <div class="nav">
+          <div class="container">
+            <ul>
+              <li><a href="HomePage.html">Home</a></li>
+              <li><a href="Browse.html">Browse</a></li>
+              <li><a href="SignUp.html">Sign Up</a></li>
+              <li><a href="LogIn.html">Log In</a></li>
+              <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+          </div>
+        </div>
+    	<div>Your Order</div>
+        <table id="Order" cellpadding="5" border=solid>
+        <tr>
+        <td bgcolor="#B0F3FF">Product </td> <td bgcolor="#B0F3FF">Price</td> <td bgcolor="#B0F3FF">Amount</td>
+        </tr>
+        <script>
+		//Initialize the data
+		var $strOrd=sessionStorage.getItem("order");
+		var $order=JSON.parse($strOrd);
+		//
+		var $start=0;
+		var $end=$order.length;
+		var total=0;
+		var beanTot=0;
+		//
+		for(var i=$start; i<$end; i++){
+			var $ord=$order[i];
+			var strRow='<tr bgcolor=#eeeeee>';
+			    strRow+=('<td align="left">'+$ord['name']+'</td>');
+				strRow+=('<td align="left">'+$ord['price']+'</td>');
+				strRow+=('<td align="left">'+$ord['amount']+'</td>');
+				strRow+='</tr>';
+				if($ord['amount']>0){
+					document.write(strRow);
+					total+=(parseFloat($ord['price']))*(parseFloat($ord['amount']));
+					beanTot+=(parseInt($ord['amount']));
+				}
+				//total=total.toFixed(2);
+		}
+		document.write('<tr>'+'<td>'+"Total"+'</td>'+'<td>$'+total.toFixed(2)+'</td>'+'<td>'+beanTot+'</td>'+'</tr>');
+		</script>
+        </table>
+	</body>
+</html>

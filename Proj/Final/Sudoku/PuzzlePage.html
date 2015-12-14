@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+  	<link href="puzzlepage.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Puzzle Page</title>
+    <script type="text/javascript"src="./functions/puzzle.js">
+    </script>
+  </head>
+
+  <body>
+  		<!-- Side Panel -->
+  	<input type="submit" value="Check" onclick="check()" id="check">
+  	<input type="submit" value="Quit" onclick="SHome()" id="home">
+  	</br>
+    </br>
+    </br>
+    </br>
+    	<!-- Table -->
+	<table id="Puzzle">
+    <caption><b>Sudoku : Easy</b></caption>
+    <colgroup><col><col><col>
+    <colgroup><col><col><col>
+    <colgroup><col><col><col>
+    <tbody>
+    	<!-- ROW 1-->
+     <tr> 	<td><input id="00"></td>   									<td><input id="01"></td>  									<td><input id="02"></td> 
+     		<td><input id="03" disabled value="2" class="given"></td> 	<td><input id="04" disabled value="6" class="given"></td>  	<td><input id="05"></td> 
+     		<td><input id="06" disabled value="7" class="given"></td> 	<td><input id="07"></td>  									<td><input id="08" disabled value="1" class="given"></td>
+     
+     	<!-- ROW 2-->
+     <tr> 	<td><input id="10" disabled value="6" class="given"></td>   <td><input id="11" disabled value="8" class="given"></td> 	<td><input id="12"></td> 
+     		<td><input id="13"></td>  									<td><input id="14" disabled value="7" class="given"></td>   <td><input id="15"></td> 
+            <td><input id="16"></td>  									<td><input id="17" disabled value="9" class="given"></td> 	<td><input id="18"></td>
+     
+     	<!-- ROW 3-->
+     <tr> 	<td><input id="20" disabled value="1" class="given"></td> 	<td><input id="21" disabled value="9" class="given"></td> 	<td><input id="22"></td> 
+     		<td><input id="23"></td>  									<td><input id="24"></td>  									<td><input id="25" disabled value="4" class="given"></td> 
+            <td><input id="26" disabled value="5" class="given"></td> 	<td><input id="27"></td>  									<td><input id="28"></td>
+    <tbody>
+     
+     	<!-- ROW 4-->
+     <tr> 	<td><input id="30" disabled value="8" class="given"></td> 	<td><input id="31" disabled value="2" class="given"></td> 	<td><input id="32"></td> 
+     		<td><input id="33" disabled value="1" class="given"></td> 	<td><input id="34"></td>  									<td><input id="35"></td>
+            <td><input id="36"></td>  									<td><input id="37" disabled value="4" class="given"></td> 	<td><input id="38"></td>
+     
+     	<!-- ROW 5-->
+     <tr> 	<td><input id="40"></td>  									<td><input id="41"></td>  									<td><input id="42" disabled value="4" class="given"></td>
+     		<td><input id="43" disabled value="6" class="given"></td> 	<td><input id="44"></td>  									<td><input id="45" disabled value="2" class="given"></td>
+            <td><input id="46" disabled value="9" class="given"></td> 	<td><input id="47"></td> 									<td><input id="48"></td>
+     
+     	<!-- ROW 6-->
+     <tr> 	<td><input id="50"></td>  									<td><input id="51" disabled value="5" class="given"></td> 	<td><input id="52"></td>
+     		<td><input id="53"></td>  									<td><input id="54"></td>  									<td><input id="55" disabled value="3" class="given"></td>
+            <td><input id="56"></td>  									<td><input id="57" disabled value="2" class="given"></td> 	<td><input id="58" disabled value="8" class="given"></td>
+    <tbody>
+     
+     	<!-- ROW 7-->
+     <tr> 	<td><input id="60"></td>  									<td><input id="61"></td>  									<td><input id="62" disabled value="9" class="given"></td>
+     		<td><input id="63" disabled value="3" class="given"></td>   <td><input id="64"></td>  									<td><input id="65"></td> 
+            <td><input id="66"></td>  									<td><input id="67" disabled value="7" class="given"></td>   <td><input id="68" disabled value="4" class="given"></td>
+     
+     	<!-- ROW 8-->
+     <tr> 	<td><input id="70"></td>  									<td><input id="71" disabled value="4" class="given"></td> 	<td><input id="72"></td>
+     		<td><input id="73"></td>  									<td><input id="74" disabled value="5" class="given"></td> 	<td><input id="75"></td>
+            <td><input id="76"></td>  									<td><input id="77" disabled value="3" class="given"></td> 	<td><input id="78" disabled value="6" class="given"></td>
+     
+     	<!-- ROW 9-->
+     <tr> 	<td><input id="80" disabled value="7" class="given"></td> 	<td><input id="81"></td>  									<td><input id="82" disabled value="3" class="given"></td>
+     		<td><input id="83"></td>  									<td><input id="84" disabled value="1" class="given"></td>	<td><input id="85" disabled value="8" class="given"></td> 
+            <td><input id="86"></td>  									<td><input id="87"></td>  									<td><input id="88"></td>
+    </table>
+    <!-- <div> <p id="Correct" value="Test">Correct Numbers : </p></div> -->
+    </br>
+    </br>
+    <table id="Stats">
+    <tbody>
+     <tr>	<td><input id="Correct" disabled value="Correct Numbers : "></td>	<td><input id="Mistakes" disabled value="Mistakes : "></td>	<td><input id="Remaining" disabled value="Remaining Numbers : "></td>
+    </table>
+  </body>
+</html>
