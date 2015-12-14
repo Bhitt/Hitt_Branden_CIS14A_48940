@@ -4,7 +4,7 @@ ul{
 	color:black;
 }
 .nav a {
-  color: #fff;
+  color: #000000;
   font-size: 14px;
   font-weight: bold;
   padding: 20px 10px;
@@ -14,11 +14,14 @@ ul{
 .nav li{
     display:inline;    
 }
-
+header{
+	background-color:#FFF;
+}
 body {
-  background-image: url("HomeBack.jpeg");
+  /*background-image: url("HomeBack.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background-color:#DDFFFD;
 }
 
 .jumbotron .container{
@@ -27,7 +30,7 @@ body {
 }
 
 .jumbotron h1 {
-  color: #fff;
+  color: #000000;
   font-size: 48px;  
   font-family: "Arial", sans-serif;
   font-weight: bold;
@@ -35,7 +38,7 @@ body {
 
 .jumbotron p {
   font-size: 20px;
-  color: #fff;
+  color: #000000;
 }
 
 .learn-more {

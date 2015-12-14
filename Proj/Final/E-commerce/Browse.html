@@ -6,9 +6,10 @@
     <title>Browse</title>
     <script type="text/javascript" src="./functions/browse.js">
 	</script>
+    
   </head>
-
-  <body>
+  <body onload="filPage()">
+  <header>
   <div class="nav">
         <ul>
           <li><a href="HomePage.html">Home</a></li>
@@ -18,36 +19,45 @@
           <li><a href="Checkout.html">Checkout</a></li>
         </ul>
     </div>
+  </header>
+  <section>
     	<table id="lTable">
         <tbody>
         	<tr>
             	<td><img src="./ProductImages/beans1.jpg" width="300" height="300" /></br>Pink  Floyds $<span id="p1">4.50</span></br><input id="listing1" type="button" onclick="addCart('ls1','p1')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls1','p1')" value="Delete from Cart"  /></br>
-                	<input id="ls1" value="0" disabled /></td><br />
+                	<input id="ls1" value="0" disabled /></td>
 				<td><img src="./ProductImages/beans2.jpg" width="300" height="300" /></br>Bertie Bott's Beans  $<span id="p2">8.99</span></br><input id="listing2" type="button" onclick="addCart('ls2','p2')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls2','p2')" value="Delete from Cart"  /></br>
-                	<input id="ls2" value="0" disabled /></td><br />
+                	<input id="ls2" value="0" disabled /></td>
                 <td><img src="./ProductImages/beans3.jpg" width="300" height="300" /></br>Fortune Beans  $<span id="p3">6.50</span></br><input id="listing3" type="button" onclick="addCart('ls3','p3')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls3','p3')" value="Delete from Cart"  /></br>
-                	<input id="ls3" value="0" disabled /></td><br />
+                	<input id="ls3" value="0" disabled /></td>
                 <td><img src="./ProductImages/beans4.jpg" width="300" height="300" /></br>Misery Beans  $<span id="p4">8.50</span></br><input id="listing4" type="button" onclick="addCart('ls4','p4')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls4','p4')" value="Delete from Cart"  /></br>
-                	<input id="ls4" value="0" disabled /></td><br />
+                	<input id="ls4" value="0" disabled /></td>
+            </tr>
             <tr>
             	<td><img src="./ProductImages/beans5.jpg" width="300" height="300" /></br>Necronomibeans $<span id="p5">5.99</span></br><input id="listing5" type="button" onclick="addCart('ls5','p5')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls5','p5')" value="Delete from Cart"  /></br>
-                	<input id="ls5" value="0" disabled /></td><br />
+                	<input id="ls5" value="0" disabled /></td>
                 <td><img src="./ProductImages/beans6.jpg" width="300" height="300" /></br>Mystery Beans  $<span id="p6">3.50</span></br><input id="listing6" type="button" onclick="addCart('ls6','p6')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls6','p6')" value="Delete from Cart"  /></br>
-                	<input id="ls6" value="0" disabled /></td><br />
+                	<input id="ls6" value="0" disabled /></td>
                 <td><img src="./ProductImages/beans7.jpg" width="300" height="300" /></br>Void Seeds  $<span id="p7">7.50</span></br><input id="listing7" type="button" onclick="addCart('ls7','p7')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls7','p7')" value="Delete from Cart"  /></br>
-                	<input id="ls7" value="0" disabled /></td><br />
+                	<input id="ls7" value="0" disabled /></td>
                 <td><img src="./ProductImages/beans8.jpg" width="300" height="300" /></br>Gnome Pillows  $<span id="p8">5.50</span></br><input id="listing8" type="button" onclick="addCart('ls8','p8')" value="Add to Cart" />
                 	<input type="button" onclick="delCart('ls8','p8')" value="Delete from Cart"  /></br>
-                	<input id="ls8" value="0" disabled /></td><br />
+                	<input id="ls8" value="0" disabled /></td>
+        	</tr>
         </tbody>
         </table>
         <input disabled id="total" value=0.00 />
         <input type="submit" onclick="subOrder(1)" value="Proceed To Checkout"/>
+        <input type="submit" onclick="subOrder(2)" value="Save Order"/>
+    </section>
+    <footer>
+    </footer>
+	</body>
 </html>

@@ -14,7 +14,13 @@ ul{
 .nav li{
     display:inline;    
 }
-.listings li{
+/*.listings li{
 	display:inline;
 	padding: 40px 40px;	
+}*/
+body{
+	background-color:#DDFFFD;	
+}
+header{
+	background-color:#FFF;	
 }

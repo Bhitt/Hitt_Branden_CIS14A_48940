@@ -14,4 +14,9 @@ ul{
 .nav li{
     display:inline;    
 }
-
+header{
+	background:#FFF;
+}
+body{
+	background-color:#DDFFFD;	
+}

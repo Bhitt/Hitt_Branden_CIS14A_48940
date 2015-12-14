@@ -16,6 +16,29 @@
 		 price: 15.99,
 		 amount: 2}
 	];*/
+function filPage(){
+	//get session storage
+	var $strOrd=sessionStorage.getItem("order");
+	var $order=JSON.parse($strOrd);
+	var total=0;
+	//variables for loop
+	var $start=0;
+	var $end=$order.length;
+	var place=["ls1","ls2","ls3","ls4","ls5","ls6","ls7","ls8"];
+	//send into page
+	for(var i=$start;i<$end;i++){
+		var $ord=$order[i];
+		var loc=document.getElementById(place[i]);
+		total+=(parseFloat($ord['price']))*(parseFloat($ord['amount']));
+		if($ord['amount']>0){
+				loc.value=$ord['amount'];
+		}
+	}
+	//set total on page
+	var tot=document.getElementById('total');
+	tot.value=total.toFixed(2);
+	
+}
 function addCart(loc,prc){
 	var val=document.getElementById(loc); //count for amount of product
 	var price=document.getElementById(prc).innerHTML;  //price of individual product
@@ -29,7 +52,7 @@ function delCart(loc,prc){
 	var total=document.getElementById('total');	//running total
 	if(val.value>0){
 		val.value--;
-		total.value=(parseFloat(total.value)-parseFloat(price));  //subtract price of product from total
+		total.value=(parseFloat(total.value)-parseFloat(price)).toFixed(2);  //subtract price of product from total
 	}
 }
 /*new Product((document.getElementById("listing1").name),((document.getElementById(price1).value),((document.getElementById(ls1).value));*/

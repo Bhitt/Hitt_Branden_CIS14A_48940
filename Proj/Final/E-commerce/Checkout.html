@@ -4,12 +4,11 @@
 	<meta charset="utf-8">
 	<title>Untitled Document</title>
     <link href="checkout.css" rel="stylesheet">
-	<script type="text/javascript" src="./functions/checkout.js">
 	</script>
 	</head>
 	<body>
+    <header>
         <div class="nav">
-          <div class="container">
             <ul>
               <li><a href="HomePage.html">Home</a></li>
               <li><a href="Browse.html">Browse</a></li>
@@ -17,12 +16,12 @@
               <li><a href="LogIn.html">Log In</a></li>
               <li><a href="Checkout.html">Checkout</a></li>
             </ul>
-          </div>
         </div>
+    </header>
     	<div>Your Order</div>
         <table id="Order" cellpadding="5" border=solid>
         <tr>
-        <td bgcolor="#B0F3FF">Product </td> <td bgcolor="#B0F3FF">Price</td> <td bgcolor="#B0F3FF">Amount</td>
+        <td bgcolor="#FFF">Product </td> <td bgcolor="#FFF">Price</td> <td bgcolor="#FFF">Amount</td>
         </tr>
         <script>
 		//Initialize the data
@@ -48,7 +47,7 @@
 				}
 				//total=total.toFixed(2);
 		}
-		document.write('<tr>'+'<td>'+"Total"+'</td>'+'<td>$'+total.toFixed(2)+'</td>'+'<td>'+beanTot+'</td>'+'</tr>');
+		document.write('<tr bgcolor=#FFF>'+'<td>'+"Total"+'</td>'+'<td>$'+total.toFixed(2)+'</td>'+'<td>'+beanTot+'</td>'+'</tr>');
 		</script>
         </table>
 	</body>
