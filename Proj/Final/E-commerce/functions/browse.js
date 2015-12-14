@@ -37,6 +37,7 @@ function filPage(){
 	//set total on page
 	var tot=document.getElementById('total');
 	tot.value=total.toFixed(2);
+	console.log(tot.value);
 	
 }
 function addCart(loc,prc){

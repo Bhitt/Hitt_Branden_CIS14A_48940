@@ -5,6 +5,14 @@
   </head>
   
   <body>
+  <script>
+  	function about(){
+		alert("What makes our beans magical?....Nothing really...They are just beans");	
+	}
+	function discla(){
+		alert("Over 1,000 different beans but not 1,000 TYPES of beans.\n We actually only have 8 types.");	
+	}
+  </script>
   <header>
     <div class="nav">
         <ul>
@@ -19,7 +27,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Grow your own magical beanstock today.</h1>
-        <p>Select from over 1,000 different seeds.</p>
+        <p>Select from over 1,000 different beans.<span onMouseOver="discla()">*</span></p>
       </div>
     </div> 
 
@@ -34,7 +42,7 @@
 		  <div>
 			<h3>About</h3>
 			<p>Discover what makes our beans magical.</p>
-			<p><a href="Help.html">Learn more about the process.</a></p>
+			<p><a onClick="about()"><u>Learn more about the process.</u></a></p>
 		  </div>
 		  <div>
 			<h3>Deal of the Day</h3>
@@ -44,5 +52,6 @@
 	    </div>
 	  </div>
 	</div>
+    <img src="Beanstalk.png" id="stalk">
   </body>
 </html>

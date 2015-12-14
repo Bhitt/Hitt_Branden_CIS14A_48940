@@ -54,3 +54,8 @@ body {
 .learn-more a {
   color: #00b0ff;
 }
+#stalk{
+	position:fixed;	
+	right: 10px;
+	bottom: 10px;
+}

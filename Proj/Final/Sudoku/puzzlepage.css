@@ -2,9 +2,11 @@
 /* CSS Document */
 html{
 	background-image: url("Blank.jpg");
-	background-size:auto;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
+	background-color:#000;
+	background-position:center;
+	background-size:cover;
 }
 table{
 	border-collapse: collapse;
