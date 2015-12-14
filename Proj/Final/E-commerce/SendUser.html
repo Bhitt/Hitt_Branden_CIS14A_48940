@@ -13,14 +13,13 @@
 			$_GET=getForm(url);
 			//Convert to string
 			var str=JSON.stringify($_GET);
-            var object=JSON.parse(str);
             //Testing Local Storage
             var lsObj=localStorage;
-            lsObj.clear();
+			lsObj.clear();
             //Set a property in local storage
             //With the api
             lsObj.setItem("users", str);
-			//
+			//log in function
 			function logIn(){
 				location.assign("LogIn.html");	
 			}
