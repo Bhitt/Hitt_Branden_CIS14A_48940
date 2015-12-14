@@ -1,0 +1,41 @@
+Javascript Concepts covered:
+
+Chapter 1
+<script> 	- Browse.html
+var 		- browse.js 
+console.log() 	- browse.js
+alert() 	- check.html
+
+Chapter 2
+ == operator 	- puzzle.js
+ if() 		- puzzle.js
+
+Chapter 3
+function ()	- puzzle.js
+function (para) - Browse.html
+return 		- getForm.js
+
+Chapter 4
+array		-puzzle.js
+array[i]	-puzzle.js
+for loop	-puzzle.js
+var++		-puzzle.js
+
+Chapter 5
+Objects		-getForm.js
+object[prop]	-Checkout.html
+
+Chapter 6
+document.getE..	-browse.js
+.innerHtml	-browse.js
+onload		-Browse.html
+
+Chapter 7
+.split		-getForm.js
+.substring	-getForm.js
+.indexOf	-getForm.js
+
+Chapter 8 & 9
+onclick		-Browse.html
+.MOUSEMOVE	-WinPage.html
+setTimeout	-WinPage.html
