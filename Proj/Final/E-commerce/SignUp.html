@@ -19,14 +19,61 @@
     </div>
     </header>
     <form action="SendUser.html" method="get">
-    	<input name="Name" type="text" />Name</br>
-    	<input name="Email" type="text" />Email</br>
-        <input name="Password" type="text" />Password</br>
-        <input name="PasswordConfirmation" type="text" />Password Confirmation</br>
-        <input name="Submit"type="submit"/>
+    	<input id="name" name="Name" type="text" />Name</br>
+    	<input id="email" name="Email" type="text" />Email</br>
+        <input id="pass1" name="Password" type="password" />Password</br>
+        <input id="pass2" name="PasswordConfirmation" type="password" />Password Confirmation</br>
+        <input name="Check" type="button" onclick="validate()" value="Check"/>
+        <input id="sub" name="Submit" type="hidden"/>
     </form>
+    <p> Username : Letters A-Z, digits, periods, dashes, underscores, $,@, and ! up to 30 chars.</p>
+    <p> Email : must be in the form Something@something.com </p>
+    <p> Passwords : Both must match and the password's first character must be a letter, it must contain at least 4 characters and no more than 15 characters. In addition no characters other than letters, numbers and the underscore may be used. </p>
     <script>
-	
+	function validate(){
+		var check=0;
+		var uRe=/^[-\w\.\$@\*\!]{1,30}$/;
+		//the username can use the letters A-Z, digits, periods, dashes, underscores, $,@, and ! up to 30 chars
+		var pRe=/^[a-zA-Z]\w{3,14}$/;
+		//The password's first character must be a letter, it must contain at least 4 characters and no more than 15 characters and no characters other than letters, numbers and the underscore may be used//
+		var eRe=/\S+@\S+\.\S+/;
+		var pa=document.getElementById("pass1");
+		var pa2=document.getElementById("pass2");
+		var em=document.getElementById("email");
+		var us=document.getElementById("name");
+		var unhide=document.getElementById("sub");
+		//check email   -   something@something.something
+		if(em.value.match(eRe)!= null){
+			em.style.color="#00ff00";
+			check++;
+		}else{
+			em.style.color="#ff0000";	
+		}
+		//check pass
+		if(pa.value==pa2.value && pa.value.match(pRe)!= null){
+			pa.style.color="#00ff00";
+			pa2.style.color="#00ff00";
+			check++;	
+		}else if(pa.value!=pa2.value){
+			pa.value="Passwords don't match";
+			pa.style.color="#ff0000";	
+		}else{
+			pa.value="Password not valid";
+			pa.style.color="#ff0000";	
+		}
+		//check username
+		if(us.value.match(uRe)!= null){
+			us.style.color="#00ff00";
+			check++;	
+		}else{
+			us.value="Invalid username";
+			us.style.color="ff0000";
+		}
+		//check to submit
+		if(check>=3){
+			unhide.type="Submit";	
+		}
+	}
 	
 	</script>
   </body>

@@ -6,14 +6,24 @@
 	</head>
 
 	<body>
+    <table cellpadding="10">
+    <tr bgcolor="eeeeee">
+    <td>Name</td><td>Email</td><td>Password</td>
+    </tr>
     <script>
 	//grab local storage
 	var fromSto=localStorage.getItem("users");
 	var users=JSON.parse(fromSto);
 	//display
-	for(property in users){
-		document.write(property+"="+users[property]+"</br>");
+	var $end=users.length;
+	var $start=0;
+	for(var i=$start;i<$end;i++){
+		var $usrs=users[i];
+		document.write('<tr bgcolor="#DDFFFD">'+'<td>'+$usrs['Name']+'</td>');
+		document.write('<td>'+$usrs['Email']+'</td>');
+		document.write('<td>'+$usrs['Password']+'</td>'+'</tr>');
 	}
 	</script>
+    </table>
 	</body>
 </html>

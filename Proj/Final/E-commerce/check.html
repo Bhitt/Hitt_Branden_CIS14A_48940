@@ -14,17 +14,30 @@
 			//check local storage
 			var fromStorage=localStorage.getItem("users");
 			var users=JSON.parse(fromStorage);
-			var allGood=0;
+			var start=0;
+			var end=users.length;
+			var allGood=false;
+			//loop through and check
+			for(var i=start;i<end;i++){
+				usrs=users[i];
+				if(usrs['Name']==$_GET['Name'] && usrs['Email']==$_GET['Email'] && 
+				   usrs['Password']==$_GET['Password'] && 
+				   usrs['PasswordConfirmation']==$_GET['PasswordConfirmation']){
+					   allGood=true;
+					   var login=users[i];
+				   }
+					   	
+			}
 			//Parse string back, convert to an object and display
-			for(property in users){
+			/*for(property in users){
 					if(users[property]==$_GET[property]){
 						allGood++;
 					}
 						
 					//document.write(property+"="+users[property]+"</br>");
-			}
-			if(allGood>=4){
-				alert(+"You have been signed in");
+			}*/
+			if(allGood){
+				alert("You have been signed in");
 			}else{
 				alert("Incorrect LogIn information");
 			}

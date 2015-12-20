@@ -8,18 +8,23 @@
 
 	<body>
     	<script type="text/javascript">
-			//Objectify the form information
-			var url=document.location.href;
-			$_GET=getForm(url);
-			//Convert to string
-			var str=JSON.stringify($_GET);
-            //Testing Local Storage
-            var lsObj=localStorage;
-			lsObj.clear();
-            //Set a property in local storage
-            //With the api
-            lsObj.setItem("users", str);
-			//log in function
+			
+            //Grab the $_GET Objects
+            var url=document.location.href;
+	    	$_GET=getForm(url);
+			//create array to hold objects
+			var arr=[];
+			arr[0]=$_GET;
+			//get local storage
+			var $strUser=localStorage.getItem("users");
+            var $users=JSON.parse($strUser);
+			//add objects to the same array
+			arr.push.apply(arr,$users);
+			//stringify array
+			var str=JSON.stringify(arr);
+			localStorage.clear();
+			//send string to local storage
+			localStorage.setItem("users", str);
 			function logIn(){
 				location.assign("LogIn.html");	
 			}
